@@ -225,6 +225,16 @@ services:
 
 ## Special notes 
 
+
+### Imported Entities will be Read-only
+
+Imported entities will appear on the master instance in a read-only state. This is the expected behavior and comes with the following limitations:
+
+On the master instance,
+
+- Remote entities cannot be Assigned to an Area
+- Remote entities cannot be chosen as devices within an Automation, Scene, or Script.
+
 ### Missing Components
 
 If you have remote domains (e.g. `switch`), that are not loaded on the master instance you need to list them under `load_components`, otherwise you'll get a `Call service failed` error.
